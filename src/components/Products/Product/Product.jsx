@@ -10,10 +10,10 @@ const Product = ({ product }) => {
             <CardMedia className={classes.media} image={product.image} title={product.name}/>
             <CardContent>
                 <div className={classes.cardContent}>
-                    <Typography variant="h5">{product.name}</Typography>
-                    <Typography variant="h5">{product.price}</Typography>
+                    <Typography variant="h4">{product.name}</Typography>
+                    <Typography variant="h4">{product.price}</Typography>
                 </div>
-                <Typography variant="h2" color="textSecondary">{product.description}</Typography>
+                <Typography variant="h5" color="textSecondary">{product.description}</Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.CardActions}>
                 <IconButton aria-label="Add To Cart">
