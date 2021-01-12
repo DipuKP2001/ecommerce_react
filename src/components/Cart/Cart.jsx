@@ -1,4 +1,4 @@
-import { Container, Typography } from '@material-ui/core'
+import { Container, Typography,Grid } from '@material-ui/core'
 
 import useStyles from './styles'
 
@@ -11,6 +11,16 @@ const Cart = ({cart}) => {
     )
     const FilledCart = () => (
         <>
+            <Grid>
+                { cart.line_items.map((item)=> (
+                    <Grid>
+                        <div>{item.name}</div>
+                    </Grid>
+                )) }
+            </Grid>
+            <div className={classes.cardDetails}>
+                <Typography variant="h4">Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
+            </div>
         </>
     )
 
