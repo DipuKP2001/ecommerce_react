@@ -1,11 +1,12 @@
 import React,{useState} from 'react'
 import { Paper, Typography,Stepper, Step, StepLabel } from "@material-ui/core";
 
+import useStyles from './styles'
 
 const steps = ['Shipping address','Payment details']
 
 const Checkout = () => {
-
+    const classes = useStyles()
     const [activeStep,setActiveStep] = useState(0)
 
     return(
